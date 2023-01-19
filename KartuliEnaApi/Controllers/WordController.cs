@@ -38,6 +38,7 @@ namespace KartuliEnaApi.Controllers
             await _wordServices.CreateAsync(newWord);
 
             return CreatedAtAction(nameof(Get), new { id = newWord.Id }, newWord);
+            //return NoContent();
         }
 
         [HttpPut("{id:length(24)}")]
