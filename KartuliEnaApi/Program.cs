@@ -5,7 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.Configure<WordDatabaseSettings>(builder.Configuration.GetSection("WordDatabase"));
+builder.Services.Configure<TagDatabaseSettings>(builder.Configuration.GetSection("TagDatabase"));
 builder.Services.AddSingleton<WordServices>();
+builder.Services.AddSingleton<TagServices>();
 builder.Services.AddControllers()
     .AddJsonOptions(
         options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
