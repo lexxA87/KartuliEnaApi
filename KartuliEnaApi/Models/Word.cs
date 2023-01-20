@@ -12,7 +12,7 @@ namespace KartuliEnaApi.Models
         public string Ru { get; set; } = null!;
         public string En { get; set; } = null!;
         public string[] Examples { get; set; }
-        public string[] Tags { get; set; }
+        public List<Tag> Tags { get; set; }
         public string Role { get; set; } = null!;
     }
 }
